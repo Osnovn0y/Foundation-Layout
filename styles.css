@@ -185,7 +185,7 @@
   position: relative;
   margin-top: 84px;
   padding-right: 105px;
-  background-image: url(/Images/ouch.png);
+  background-image: url(./Images/ouch.png);
   background-repeat: no-repeat;
   background-position: 449px 8px;
 }
@@ -222,6 +222,36 @@
   font-weight: 700;
   border: none;
   border-radius: 2px;
+}
+
+.about {
+  display: flex;
+  width: 1400px;
+  height: 255px;
+  margin: auto;
+  background-color: #f4f5f7;
+}
+.about .content {
+  display: flex;
+  width: 1140px;
+  margin: auto;
+}
+.about .content .article {
+  width: 556px;
+  margin-right: 28px;
+  color: #2b292d;
+}
+.about .content .article__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}
+.about .content .article__text {
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0;
+  margin-top: 6px;
 }
 
 * {
