@@ -226,28 +226,23 @@
 
 .about {
   display: flex;
-  width: 1400px;
+  width: 100%;
   height: 255px;
-  margin: auto;
   background-color: #f4f5f7;
+  justify-content: space-between;
+  padding: 77px 130px 76px 130px;
 }
-.about .content {
-  display: flex;
-  width: 1140px;
-  margin: auto;
-}
-.about .content .article {
+.about .article {
   width: 556px;
-  margin-right: 28px;
   color: #2b292d;
 }
-.about .content .article__title {
+.about .article__title {
   margin: 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 32px;
 }
-.about .content .article__text {
+.about .article__text {
   font-size: 22px;
   line-height: 32px;
   margin: 0;
