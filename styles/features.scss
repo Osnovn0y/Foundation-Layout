@@ -1,7 +1,13 @@
 @import "variables.scss";
+@import "breakpoints.scss";
 
 .features {
   position: relative;
+  display: none;
+
+  @include for-screen {
+    display: block;
+  }
 
   & .features__content {
     margin-left: 130px;
