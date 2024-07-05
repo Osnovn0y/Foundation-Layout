@@ -46,6 +46,7 @@
         display: none;
 
         @include for-screen {
+          display: block;
           font-size: 18px;
           line-height: 25px;
           color: $text-color;

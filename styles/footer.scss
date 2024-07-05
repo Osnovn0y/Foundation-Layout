@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "breakpoints.scss";
 
 .footer {
   margin-top: auto;
@@ -7,16 +8,28 @@
   flex-direction: column;
 
   & .footer-navigation {
-    margin: auto;
-    width: 1140px;
-    height: 338px;
     display: flex;
+    flex-direction: column;
+
+    @include for-screen {
+      margin: 0 auto;
+      width: 1140px;
+      height: 338px;
+      display: flex;
+      flex-direction: row;
+    }
 
     & .about-company {
-      margin-top: 44px;
+      margin: 44px 15px 0 15px;
 
       & .footer-logo {
         display: flex;
+        display: none;
+
+        @include for-screen {
+          display: block;
+          display: flex;
+        }
 
         & .footer-logo__image {
           width: 60px;
@@ -43,6 +56,35 @@
         }
       }
 
+      & .logo-vertical {
+        text-align: center;
+
+        @include for-screen {
+          display: none;
+        }
+
+        & .logo-vertical__image {
+          width: 60px;
+          height: 60px;
+        }
+
+        & .logo-vertical__text {
+          margin-top: 20px;
+          color: $text-color;
+
+          & .logo-vertical__name {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 700;
+          }
+          & .logo-vertical__description {
+            font-size: 18px;
+            line-height: 25px;
+            opacity: 0.6;
+          }
+        }
+      }
+
       & .footer__description {
         line-height: 26px;
         font-size: 18px;
@@ -50,23 +92,61 @@
         color: $text-color;
         opacity: 0.6;
         margin-top: 26px;
+        display: none;
+
+        @include for-screen {
+          display: block;
+        }
       }
 
       & .downloads {
-        margin-top: 25px;
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+
+        @include for-screen {
+          margin-top: 25px;
+          display: block;
+        }
 
         & .downloads__item {
           margin-right: 10px;
         }
       }
     }
+
+    & .footer__line-mobile {
+      height: 1px;
+      width: 100%;
+      background-color: $text-color;
+      border: none;
+      opacity: 0.1;
+      margin: 0;
+      margin-top: 40px;
+
+      @include for-screen {
+        display: none;
+      }
+    }
+
     & .additional-navigation {
       display: flex;
-      margin-top: 60px;
-      margin-left: auto;
+      flex-direction: column;
+      margin-top: 40px;
+      margin-left: 15px;
+
+      @include for-screen {
+        flex-direction: row;
+        margin-top: 60px;
+        margin-left: auto;
+      }
 
       & .additional-navigation__column {
-        margin-right: 29px;
+        margin-bottom: 25px;
+
+        @include for-screen {
+          margin-right: 29px;
+        }
       }
 
       & .nav-links {
@@ -99,33 +179,62 @@
   }
 
   &__line {
-    height: 1px;
-    width: 100%;
-    background-color: $text-color;
-    border: none;
-    opacity: 0.1;
-    margin: 0;
+    display: none;
+
+    @include for-screen {
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $text-color;
+      border: none;
+      opacity: 0.1;
+      margin: 0;
+      margin-top: 55px;
+    }
   }
 
   & .footer-links {
-    margin: auto;
-    height: 50px;
-    width: 1140px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 22px;
+    margin-left: 15px;
+
+    @include for-screen {
+      width: 1140px;
+      height: 50px;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      align-items: center;
+    }
 
     & .terms__item {
-      line-height: 50px;
+      line-height: 22px;
       text-decoration: none;
       color: $text-color;
       opacity: 0.6;
       font-size: 14px;
       margin-right: 22px;
+
+      @include for-screen {
+        line-height: 50px;
+      }
     }
 
-    & .social-links__item {
-      margin-left: 20px;
+    & .social-links {
+      margin-top: 30px;
+
+      @include for-screen {
+        margin-top: 0;
+      }
+
+      & .social-links__item {
+        margin-right: 20px;
+
+        @include for-screen {
+          margin-left: 20px;
+        }
+      }
     }
   }
 }
