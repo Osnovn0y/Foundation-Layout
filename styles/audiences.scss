@@ -1,0 +1,120 @@
+@import "variables.scss";
+@import "breakpoints.scss";
+@import "common.scss";
+
+.audiences {
+  padding: 50px 15px;
+  text-align: center;
+  background-color: rgba($color: #00a1c6, $alpha: 0.07);
+
+  @include for-screen {
+    padding: 108px 130px 110px 130px;
+  }
+
+  & .audiences-info {
+    @include for-screen {
+      width: 556px;
+      margin: auto;
+    }
+
+    & .audiences__subtitle {
+      font-size: 22px;
+      line-height: 34px;
+      color: $text-color;
+      margin: 0;
+    }
+
+    & .audiences__title {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -0.36px;
+      font-weight: 700;
+      color: $text-color;
+      margin: 0;
+      margin-top: 17px;
+
+      @include for-screen {
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -0.5;
+        margin-top: 24px;
+      }
+    }
+
+    & .audiences__text {
+      font-size: 24px;
+      line-height: 34px;
+      color: $text-color;
+      margin: 0;
+      margin-top: 18px;
+
+      @include for-screen {
+        margin-top: 30px;
+      }
+    }
+
+    & .audiences__btns {
+      margin-top: 30px;
+
+      @include for-screen {
+        margin-top: 34px;
+      }
+
+      & .audiences-button {
+        box-shadow: 0px 4px 6px 0px #0000000d;
+        margin: 0;
+        margin-bottom: 12px;
+
+        @include for-screen {
+          margin: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  & .audiences__options {
+    margin-top: 40px;
+
+    @include for-screen {
+      display: flex;
+      margin-top: 111px;
+    }
+
+    & .audiences__options-item {
+      height: 300px;
+      background-color: white;
+      margin-bottom: 15px;
+      padding-top: 22px;
+      box-shadow: 0px 4px 6px 0px #0000000d;
+
+      @include for-screen {
+        width: 262px;
+        height: 300px;
+        margin: auto;
+      }
+
+      &:hover {
+        background-color: #3141c5;
+        box-shadow: 0px 13px 18px 0px #00000026;
+      }
+
+      &:hover .options-item__name {
+        color: #fff;
+      }
+
+      & .options-item__image {
+        max-width: 100%;
+      }
+
+      & .options-item__name {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 700;
+        color: $text-color;
+        margin: 0;
+        margin-top: 22px;
+      }
+    }
+  }
+}

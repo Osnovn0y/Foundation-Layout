@@ -1,0 +1,107 @@
+@import "variables.scss";
+@import "breakpoints.scss";
+
+.order {
+  padding: 50px 15px;
+  background-color: #f4f5f7;
+
+  @include for-screen {
+    padding: 72px 0;
+    display: flex;
+  }
+
+  &__illustration {
+    max-width: 200px;
+    display: flex;
+    margin: auto;
+
+    @include for-screen {
+      max-width: 270px;
+      margin-right: 122px;
+    }
+  }
+
+  &__details {
+    @include for-screen {
+      max-width: 555px;
+      margin-right: 227px;
+    }
+
+    & .order__title {
+      margin: 0;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -0.25px;
+      font-weight: 700;
+      color: $text-color;
+      margin-top: 40px;
+      text-align: center;
+
+      @include for-screen {
+        text-align: left;
+      }
+    }
+
+    & .order__text {
+      margin: 0;
+      font-size: 22px;
+      line-height: 32px;
+      color: $text-color;
+      margin-top: 18px;
+
+      @include for-screen {
+        margin-top: 12px;
+      }
+    }
+
+    & .order__form {
+      @include for-screen {
+        display: flex;
+        margin-top: 26px;
+      }
+    }
+
+    & .order__email {
+      width: 100%;
+      height: 48px;
+      text-align: center;
+      border: 1px solid rgba($color: $text-color, $alpha: 0.2);
+      margin-top: 80px;
+      font-size: 18px;
+      line-height: 14px;
+
+      @include for-screen {
+        line-height: 13px;
+        text-align: left;
+        padding-left: 15px;
+        margin: 0;
+        margin-right: 10px;
+      }
+
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+
+    & .order__button {
+      width: 100%;
+      margin-top: 12px;
+
+      @include for-screen {
+        width: 160px;
+        margin: 0;
+      }
+    }
+
+    & .order__terms {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba($color: $text-color, $alpha: 0.6);
+      margin-top: 10px;
+
+      & .order__terms-link {
+        color: #3142c6;
+      }
+    }
+  }
+}
