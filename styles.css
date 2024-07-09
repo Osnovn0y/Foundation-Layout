@@ -533,6 +533,12 @@
   max-width: 80%;
 }
 
+@media screen and (min-width: 400px) {
+  .second {
+    padding-bottom: 51px;
+  }
+}
+
 .features {
   position: relative;
   display: none;
@@ -540,6 +546,7 @@
 @media screen and (min-width: 400px) {
   .features {
     display: block;
+    margin-bottom: 105px;
   }
 }
 .features .features__content {

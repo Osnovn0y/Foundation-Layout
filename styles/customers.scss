@@ -45,3 +45,9 @@
     max-width: 80%;
   }
 }
+
+.second {
+  @include for-screen {
+    padding-bottom: 51px;
+  }
+}
